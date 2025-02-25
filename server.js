@@ -22,7 +22,7 @@ cloudinary.config({
   api_key: "862294648318396",
   api_secret: "UpLEAdZeSp734471eMzBQkuCyec",
 });
-// hhdfhv
+// hhdfhvnn
 const app = express();
 // for accept big files
 app.use(express.json({ limit: "100mb" }));
@@ -148,6 +148,6 @@ app.post("/upload", upload.fields([{ name: "file" }, { name: "image" }]), async 
 });
 
 // Start server
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
-});
+// app.listen(3000, () => {
+//   console.log("Server is running on port 3000");
+// });
