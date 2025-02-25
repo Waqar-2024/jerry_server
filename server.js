@@ -30,6 +30,7 @@ app.use(express.urlencoded({ limit: "100mb", extended: true }));//for complex da
 
 // for accept frontend request
 app.use(cors());
+const port = process.env.PORT || 3000
 // for media roues video,audio,image
 app.use("/media", mediaRoutes);
 // Multer configuration: Store files in memory/ram
@@ -147,6 +148,9 @@ app.post("/upload", upload.fields([{ name: "file" }, { name: "image" }]), async 
   }
 });
 
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
 // Start server
 // app.listen(3000, () => {
 //   console.log("Server is running on port 3000");
