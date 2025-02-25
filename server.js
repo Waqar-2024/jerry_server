@@ -149,7 +149,7 @@ app.post("/upload", upload.fields([{ name: "file" }, { name: "image" }]), async 
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Server is running on port just for checking ${port}`);
 });
 // Start server
 // app.listen(3000, () => {
